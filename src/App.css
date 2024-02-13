@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
+/* style.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh; /* Ustawia grę na całą wysokość ekranu */
 }
 
-.App-link {
-  color: #61dafb;
+.game-board {
+  background-color: #f0f0f0; /* Kolor tła planszy */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-row {
+  display: flex;
+}
+
+.square {
+  background-color: #fff; /* Kolor tła pola */
+  border: 1px solid #ccc; /* Grubość i kolor obramowania pola */
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  transition: background-color 0.3s ease; /* Animacja zmiany koloru tła */
+}
+
+.square:hover {
+  background-color: #f0f0f0; /* Kolor tła pola po najechaniu myszką */
+}
+
+.game-info {
+  margin-top: 20px;
+}
+
+.game-info ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.game-info ol li {
+  margin-bottom: 5px;
+}
+
+.game-info button {
+  background-color: #007bff; /* Kolor tła przycisku */
+  color: #fff; /* Kolor tekstu */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animacja zmiany koloru tła */
+}
+
+.game-info button:hover {
+  background-color: #0056b3; /* Kolor tła przycisku po najechaniu myszką */
 }
