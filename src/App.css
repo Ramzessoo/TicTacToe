@@ -29,7 +29,7 @@
   text-align: center;
   margin-right: -1px;
   margin-bottom: -1px;
-  transition: background-color 0.3s ease; /* Animacja zmiany koloru tła */
+  transition: background-color 1s ease; /* Animacja zmiany koloru tła */
 }
 
 .square:hover {
@@ -38,15 +38,27 @@
 
 .game-info {
   margin-top: 20px;
+  animation: fadeIn 1s ease; /* Dodanie animacji */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .game-info ol {
   list-style-type: none;
   padding-left: 0;
+  animation: fadeIn 1s ease;
 }
 
 .game-info ol li {
   margin-bottom: 5px;
+  animation: fadeIn 1s ease;
 }
 
 .game-info button {
@@ -56,7 +68,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Animacja zmiany koloru tła */
+  transition: background-color 1s ease; /* Animacja zmiany koloru tła */
 }
 
 .game-info button:hover {
